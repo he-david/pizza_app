@@ -2,31 +2,30 @@
 // Styles
 import { Row, Col } from "react-bootstrap"
 
+
 type Props = {
-    imgUrl: string;
+    imgUrl: any;
     title: string[];
-    description: string[];
+    description: string;
 }
 
 const InfoDiv: React.FC<Props> = ({ imgUrl, title, description }) => {
     return (
-        <div className="bg-white rounded">
-            <Row className="p-4 align-items-center">
-                <Col xs={2}>
+        <div className="rounded" style={{ background: "#fff" }}>
+            <Row className="py-3 px-4 align-items-center">
+                <Col xs={2} className="">
                     {imgUrl}
                 </Col>
-                <Col xs={4}>
-                    <h2 className="text-uppercase w-50">
+                <Col xs={5}>
+                    <h2 className="text-uppercase">
                         {title[0]}
                         <br/>
                         {title[1]}
                     </h2>
                     </Col>
-                <Col xs={6}>
-                    <p>
-                        {description[0]}
-                        <br/>
-                        {description[1]}
+                <Col xs={5}>
+                    <p className="fw-bold" style={{ fontSize: ".8rem"}}>
+                        {description}
                     </p>
                 </Col>
             </Row>
