@@ -1,10 +1,10 @@
-type Props = {
+export type SVGProps = {
     color: string;
     width: string;
     height: string;
 }
 
-const PizzaIcon: React.FC<Props> = ({ color, width, height }) => {
+const PizzaIcon: React.FC<SVGProps> = ({ color, width, height }) => {
     return ( 
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
             viewBox="0 0 58.393 58.393" width={width} height={height}>

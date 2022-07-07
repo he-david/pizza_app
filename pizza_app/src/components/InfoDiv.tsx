@@ -24,7 +24,7 @@ const InfoDiv: React.FC<Props> = ({ imgUrl, title, description }) => {
                     </h2>
                     </Col>
                 <Col xs={5}>
-                    <p className="fw-bold" style={{ fontSize: ".8rem"}}>
+                    <p className="fw-bold" style={{ fontSize: ".85rem"}}>
                         {description}
                     </p>
                 </Col>
