@@ -11,7 +11,7 @@ type Props = {
 
 const InfoDiv: React.FC<Props> = ({ imgUrl, title, description }) => {
     return (
-        <div className="rounded" style={{ background: "#fff" }}>
+        <div className="rounded mb-4" style={{ background: "#fff" }}>
             <Row className="py-3 px-4 align-items-center">
                 <Col xs={2} className="">
                     {imgUrl}
