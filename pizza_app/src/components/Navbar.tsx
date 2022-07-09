@@ -13,7 +13,7 @@ import CreatorIcon from "../images/CreatorIcon";
 
 const Navbar = () => {
     return (
-        <div style={{background: "url(https://www.pizzaforte.hu/header-wood.119a920aeb8b2d7be794.jpg)"}}>
+        <div style={{background: "url(https://www.pizzaforte.hu/header-wood.119a920aeb8b2d7be794.jpg)", margin: "0 0 75px 0"}}>
             <Container className="mb-3">
                 <NavbarBs>
                     <Nav className="text-uppercase fw-bold text-center" style={{fontSize: "1.2rem"}}>
@@ -41,7 +41,7 @@ const Navbar = () => {
                                 Pizzeppa
                             </div>
                         </Nav.Link>
-                        <Nav.Link className="text-white" as={NavLink} to="/salads">
+                        <Nav.Link className="text-white" as={NavLink} to="/salads" style={{margin: "0 100px 0 0"}}>
                             <div className="mb-1">
                                 <SaladsIcon color="white" width="40%" height="40%" />
                             </div>
@@ -49,7 +49,12 @@ const Navbar = () => {
                                 Salads
                             </div>
                         </Nav.Link>
-                        <Nav.Link className="text-white" as={NavLink} to="/desserts">
+                        <div className="position-absolute top-100 start-50 translate-middle" style={{width: "200px"}}>
+                            <Nav.Link as={NavLink} to="/">
+                                <img className="w-75" src="https://cdn-icons.flaticon.com/png/512/706/premium/706918.png?token=exp=1657353842~hmac=b7d6e427c944ee6f894e4aea95ffc8d7" alt="home icon" />
+                            </Nav.Link>
+                        </div>
+                        <Nav.Link className="text-white" as={NavLink} to="/desserts" style={{margin: "0 0 0 100px"}}>
                             <div className="mb-1">
                                 <DessertsIcon color="white" width="40%" height="40%" />
                             </div>
