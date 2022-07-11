@@ -6,13 +6,14 @@ type Props = {
     imgUrl: string;
     title: string;
     price: number;
+    imgSize: {height: string, width: string};
 }
 
-const SimpleCard: React.FC<Props> = ({ imgUrl, title, price }) => {
+const SimpleCard: React.FC<Props> = ({ imgUrl, title, price, imgSize }) => {
     return (
         <Card className="h-100 w-100">
             <div className="text-center">
-                <Card.Img variant="top" className="w-50" src={imgUrl} />
+                <Card.Img variant="top" src={imgUrl} style={imgSize} />
             </div>
             <Card.Body className="fw-bold d-flex flex-column">
                 <Card.Title className="text-uppercase fs-3 mb-3">{title}</Card.Title>

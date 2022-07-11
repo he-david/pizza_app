@@ -18,7 +18,7 @@ const Desserts = () => {
             <Row>
                 {fetchDesserts().map(dessert => (
                     <Col xs={12} md={6} lg={4} key={dessert.id} className="d-flex mb-4">
-                        <SimpleCard imgUrl={dessert.imgUrl} title={dessert.title} price={dessert.price} />
+                        <SimpleCard imgUrl={dessert.imgUrl} title={dessert.title} price={dessert.price} imgSize={{height: "180px", width: "180px"}} />
                     </Col>
                 ))};
             </Row>

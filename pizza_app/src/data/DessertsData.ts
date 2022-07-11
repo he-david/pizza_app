@@ -1,13 +1,13 @@
 const dessertsJSON = [
     {
         id: 1,
-        imgUrl: "https://ted.pizzaforte.hu/mobile/desszertek/makos-guba.png",
+        imgUrl: "https://ted.pizzaforte.hu/desktop/desszertek/erdei-gyumolcsos-turokrem.png",
         title: "COTTAGE CHEESE CREAM WITH FOREST BERRRIES",
         price: 680
     },
     {
         id: 2,
-        imgUrl: "https://ted.pizzaforte.hu/mobile/desszertek/tiramisu.png",
+        imgUrl: "https://ted.pizzaforte.hu/desktop/desszertek/makos-guba.png",
         title: "POPPY DUMPLINGS",
         price: 890
     },
