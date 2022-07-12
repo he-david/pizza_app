@@ -51,7 +51,7 @@ const Navbar = () => {
                         </Nav.Link>
                         <div className="position-absolute top-100 start-50 translate-middle" style={{width: "200px"}}>
                             <Nav.Link as={NavLink} to="/">
-                                <img className="w-75" src="https://cdn-icons.flaticon.com/png/512/706/premium/706918.png?token=exp=1657522380~hmac=2f404ff4a1efb5bb144c17d0b23084b4" alt="home icon" />
+                                <img className="w-75" src="https://cdn-icons-png.flaticon.com/512/1404/1404945.png" alt="home icon" />
                             </Nav.Link>
                         </div>
                         <Nav.Link className="text-white" as={NavLink} to="/desserts" style={{margin: "0 0 0 100px"}}>
