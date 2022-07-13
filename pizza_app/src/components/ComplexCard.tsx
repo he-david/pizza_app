@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // Styles
 import { Button, Card, Col, Row } from "react-bootstrap";
 
@@ -10,8 +12,10 @@ interface Props extends SimpleCardProps {
 }
 
 const ComplexCard: React.FC<Props> = ({ imgUrl, title, price, imgSize, description, containsCheese}) => {
+    const [veganCheese, setVeganCheese] = useState(false);
+
     return (
-        <Card className="h-100 w-100">
+        <Card>
             <Card.Body className="fw-bold d-flex flex-column">
                 <Row>
                     <Col xs={4}>
@@ -25,7 +29,7 @@ const ComplexCard: React.FC<Props> = ({ imgUrl, title, price, imgSize, descripti
                                 <div className="form-check">
                                     <label className="form-check-label text-uppercase text-success" style={{ fontSize: ".9rem" }}>
                                         Vegan cheese
-                                        <input className="form-check-input" type="checkbox" value=""/>
+                                        <input className="form-check-input" type="checkbox" checked={veganCheese} onChange={() => setVeganCheese(!veganCheese)}/>
                                     </label>
                                 </div>
                             ) : (<div style={{ margin: "15px 0 0 0"}}></div>)}

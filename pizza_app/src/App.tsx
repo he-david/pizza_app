@@ -10,6 +10,7 @@ import Desserts from "./pages/Desserts";
 import Drinks from "./pages/Drinks";
 import Extras from "./pages/Extras";
 import Creator from "./pages/Creator";
+import Login from "./pages/Login";
 
 // Styles
 import { Container } from "react-bootstrap";
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/drinks" element={<Drinks />} />
           <Route path="/extras" element={<Extras />} />
           <Route path="/creator" element={<Creator />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Container>
     </>
