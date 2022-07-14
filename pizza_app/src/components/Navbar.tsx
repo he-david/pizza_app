@@ -12,8 +12,11 @@ import CreatorIcon from "../images/CreatorIcon";
 
 // Styles
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
+    const { isLoggedIn, logOut } = useAuth();
+
     return (
         <div style={{ margin: "0 0 40px 0" }}>
             <div style={{background: "url(https://www.pizzaforte.hu/header-wood.119a920aeb8b2d7be794.jpg)"}}>
@@ -95,11 +98,17 @@ const Navbar = () => {
             </div>
             <Container>
                 <Nav>
-                    <Nav.Link className="p-0" as={NavLink} to="/login">
-                        <Button className="text-uppercase fw-bold" size="sm" variant="success" style={{ margin: "0 0 0 35px"}}>
-                            Login
+                    {!isLoggedIn ? (
+                        <Nav.Link className="p-0" as={NavLink} to="/login">
+                            <Button className="text-uppercase fw-bold" size="sm" variant="success" style={{ margin: "0 0 0 35px"}}>
+                                Login
+                            </Button>
+                        </Nav.Link>
+                    ): (
+                        <Button onClick={logOut} className="text-uppercase fw-bold" size="sm" variant="success" style={{ margin: "0 0 0 35px"}}>
+                            Logout
                         </Button>
-                    </Nav.Link>
+                    )}
                 </Nav>
                 
             </Container>
